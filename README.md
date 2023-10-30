@@ -1,20 +1,13 @@
-# Playground Template
+# 简介
 
-A comprehensive playground template for building rich-text editors with [Plate](https://platejs.org/) and Next.js 13.
+一款基于Git的文本编辑器。
 
-## Usage
+# 使用方法
 
-```bash
-pnpm create next-app -e https://github.com/udecode/plate-playground-template
-```
+？？？
 
-## Features
+# 支持的Git客户端
+- [GitHub](https://github.com/)
+- [Gitee]()
+- [codeing]()
 
-- Next.js 13 App Directory
-- [Plate](https://platejs.org/) Editor
-- [shadcn/ui](https://ui.shadcn.com/)
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
