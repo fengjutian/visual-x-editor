@@ -27,14 +27,16 @@ export default function PlateEditor() {
     {
       id: '1',
       type: ELEMENT_PARAGRAPH,
-      children: [{ text: 'Hello, World!' }],
+      children: [{ text: '' }],
     },
   ];
 
   return (
     <DndProvider backend={HTML5Backend}>
       <CommentsProvider users={commentsUsers} myUserId={myUserId}>
-        <Plate plugins={plugins} initialValue={initialValue}>
+        <Plate plugins={plugins} initialValue={initialValue}  onChange={(data) => {
+          console.log('---data', data)
+        }}>
           <div
             ref={containerRef}
             className={cn(
