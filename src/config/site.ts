@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: 'Visual-x-editor',
-  description: '你的个人知识库',
+  description: 'Visual-x-editor',
   mainNav: [
     {
       title: 'Home',
