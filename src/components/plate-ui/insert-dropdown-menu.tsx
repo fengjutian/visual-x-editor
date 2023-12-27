@@ -10,6 +10,9 @@ import {
 } from '@udecode/plate-common';
 import { ELEMENT_H1, ELEMENT_H2, ELEMENT_H3 } from '@udecode/plate-heading';
 import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
+import { createCodeBlockPlugin, ELEMENT_CODE_BLOCK, ELEMENT_CODE_LINE, ELEMENT_CODE_SYNTAX } from '@udecode/plate-code-block';
+import { createImagePlugin, ELEMENT_IMAGE, createMediaEmbedPlugin, ELEMENT_MEDIA_EMBED } from '@udecode/plate-media';
+import { createExcalidrawPlugin, ELEMENT_EXCALIDRAW } from '@udecode/plate-excalidraw';
 
 import { Icons } from '@/components/icons';
 
@@ -64,18 +67,18 @@ const items = [
       //   description: 'Table',
       //   icon: Icons.table,
       // },
-      // {
-      //   value: 'ul',
-      //   label: 'Bulleted list',
-      //   description: 'Bulleted list',
-      //   icon: Icons.ul,
-      // },
-      // {
-      //   value: 'ol',
-      //   label: 'Numbered list',
-      //   description: 'Numbered list',
-      //   icon: Icons.ol,
-      // },
+      {
+        value: 'ul',
+        label: 'Bulleted list',
+        description: 'Bulleted list',
+        icon: Icons.ul,
+      },
+      {
+        value: 'ol',
+        label: 'Numbered list',
+        description: 'Numbered list',
+        icon: Icons.ol,
+      },
       // {
       //   value: ELEMENT_HR,
       //   label: 'Divider',
@@ -84,35 +87,37 @@ const items = [
       // },
     ],
   },
-  // {
-  //   label: 'Media',
-  //   items: [
-  //     {
-  //       value: ELEMENT_CODE_BLOCK,
-  //       label: 'Code',
-  //       description: 'Code (```)',
-  //       icon: Icons.codeblock,
-  //     },
-  //     {
-  //       value: ELEMENT_IMAGE,
-  //       label: 'Image',
-  //       description: 'Image',
-  //       icon: Icons.image,
-  //     },
-  //     {
-  //       value: ELEMENT_MEDIA_EMBED,
-  //       label: 'Embed',
-  //       description: 'Embed',
-  //       icon: Icons.embed,
-  //     },
-  //     {
-  //       value: ELEMENT_EXCALIDRAW,
-  //       label: 'Excalidraw',
-  //       description: 'Excalidraw',
-  //       icon: Icons.excalidraw,
-  //     },
-  //   ],
-  // },
+  {
+    label: 'Media',
+    items: [
+      {
+        value: ELEMENT_CODE_BLOCK,
+        label: 'Code',
+        description: 'Code (```)',
+        icon: Icons.codeblock,
+      },
+      {
+        value: ELEMENT_IMAGE,
+        label: 'Image',
+        description: 'Image',
+        icon: Icons.image,
+      },
+      {
+        value: ELEMENT_MEDIA_EMBED,
+        label: 'Embed',
+        description: 'Embed',
+        // icon: Icons.embed,
+        icon: Icons.image,
+      },
+      {
+        value: ELEMENT_EXCALIDRAW,
+        label: 'Excalidraw',
+        description: 'Excalidraw',
+        // icon: Icons.excalidraw,
+        icon: Icons.image,
+      },
+    ],
+  },
   // {
   //   label: 'Inline',
   //   items: [
@@ -154,11 +159,11 @@ export function InsertDropdownMenu(props: DropdownMenuProps) {
                   className="min-w-[180px]"
                   onSelect={async () => {
                     switch (type) {
-                      // case ELEMENT_CODE_BLOCK: {
-                      //   insertEmptyCodeBlock(editor);
-                      //
-                      //   break;
-                      // }
+                      case ELEMENT_CODE_BLOCK: {
+                        // insertEmptyCodeBlock(editor);
+
+                        break;
+                      }
                       // case ELEMENT_IMAGE: {
                       //   await insertMedia(editor, { type: ELEMENT_IMAGE });
                       //

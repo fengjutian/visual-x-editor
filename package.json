@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 9000",
+    "dev": "next dev -p 9090",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -81,6 +81,7 @@
     "react-tweet": "^3.1.1",
     "slate": "0.94.1",
     "slate-history": "0.93.0",
+    "slate-hyperscript": "^0.100.0",
     "slate-react": "0.99.0",
     "tailwind-merge": "1.14.0",
     "tailwindcss-animate": "1.0.7"
